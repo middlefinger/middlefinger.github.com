@@ -1,0 +1,70 @@
+﻿body{
+	margin:0;
+	color:#333;
+	font:14px/20px Arial, Helvetica, sans-serif;
+}
+img{border-style:none;}
+a{text-decoration:none; color:#00f;}
+a:hover{text-decoration:underline;}
+input,
+textarea,
+select{
+	font:100% Arial, Helvetica, sans-serif;
+	vertical-align:middle;
+	color:#000;
+}
+form,fieldset{
+	margin:0;
+	padding:0;
+	border-style:none;
+}
+#wrapper{
+	width:1000px;
+	margin:10px auto 0;
+}
+.countdown-block{margin:0 0 18px;}
+.countdown-block strong{
+	color:#c03;
+	width:180px;
+	display:block;
+	font-size:11px;
+	line-height:14px;
+	font-weight:normal;
+	text-align:center;
+	text-transform:uppercase;
+	margin:0 -10px 3px;
+}
+#countdown {
+	margin:0 -5px 0 0;
+	overflow:hidden;
+}
+#countdown div{float:left;}
+#countdown em{
+	clear:both;
+	width:36px;
+	display:block;
+	color:#262626;
+	font-size:11px;
+	text-align:center;
+}
+#countdown .days span,
+#countdown .hours span,
+#countdown .mins span,
+#countdown .sec span{
+	width:16px;
+	height:22px;
+	color:#ccc;
+	float:left;
+	font-size:18px;
+	line-height:22px;
+	text-align:center;
+	padding:2px 1px 10px;
+	background:url(../images/bg-countdown.gif);
+}
+#countdown .dots{
+	float:left;
+	color:#000;
+	font-size:18px;
+	line-height:22px;
+	margin-top:15px;
+}

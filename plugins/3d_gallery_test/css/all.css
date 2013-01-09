@@ -1,0 +1,83 @@
+body{
+	margin:0;
+	color:#c6cef1;
+	font:12px/20px Arial, Helvetica, sans-serif;
+	background:#c4d2f2;
+	min-width:1003px;
+}
+img{
+	border-style:none;
+	vertical-align:top;
+}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+input,
+textarea,
+select{
+	font:100% Arial, Helvetica, sans-serif;
+	vertical-align:middle;
+	color:#000;
+}
+form,fieldset{
+	margin:0;
+	padding:0;
+	border-style:none;
+}
+#wrapper {
+	overflow:hidden;
+	width:700px;
+	margin: 0 auto;
+}
+
+.gallery{
+	width:100%;
+	overflow:hidden;
+	position:relative;
+}
+
+.gallery .holder{
+	width:100%;
+	height:300px;
+	overflow:hidden;
+	position:relative;
+}
+.gallery .holder ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	width:9999px;
+	position:relative;
+}
+.gallery .holder ul li{
+	float:left;
+	width:300px;
+	height:150px;
+	border:1px solid #000;
+	background-color:#ece;
+	color:#fff;
+	font-size:16px;
+	line-height:18px;
+	text-align:center;
+}
+.gallery .switcher{
+	width:100%;
+	overflow:hidden;
+	position:relative;
+}
+.gallery .switcher ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	width:60%;
+	margin:0 auto;
+}
+.gallery .switcher ul li{
+	float:left;
+	margin:0 10px 0 0;
+}
+.gallery .prev{
+	float:left;
+}
+.gallery .next{
+	float:right;
+}
