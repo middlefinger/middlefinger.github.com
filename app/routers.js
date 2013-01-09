@@ -8,7 +8,7 @@ app.routers.Workspace = Backbone.Router.extend({
 		console.log('help');
 	},
 	search: function(query, page){
-		console.log('help,', 'query =', query, ', page =', page);
+		console.log('search', ', query =', query, ', page =', page);
 	}
 });
 
