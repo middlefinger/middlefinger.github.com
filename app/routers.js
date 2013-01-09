@@ -12,3 +12,7 @@ app.routers.Workspace = Backbone.Router.extend({
 	}
 });
 
+jQuery(function(){
+	app.routers.workspace = new app.routers.Workspace;
+	Backbone.history.start();
+});
