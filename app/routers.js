@@ -1,12 +1,12 @@
 app.routers.Workspace = Backbone.Router.extend({
 	routes: {
-		'': 'main',
-		'*/': 'main',
 		'help': 'help',
 		'search/:query': 'search',
 		'search/:query/p:page': 'search',
+		'*splat': 'main'
 	},
 	main: function(){
+		this.navigate('');
 		console.log('Main Page');
 	},
 	help: function(){
