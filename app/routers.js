@@ -1,8 +1,7 @@
 app.routers.Workspace = Backbone.Router.extend({
 	routes: {
 		'': 'main',
-		'!': 'main',
-		'!/': 'main',
+		'*': 'main',
 		'help': 'help',
 		'search/:query': 'search',
 		'search/:query/p:page': 'search',
