@@ -6,6 +6,6 @@ app.models.page = Backbone.Model.extend({
 });
 
 app.collections.pages = Backbone.Collection.extend({
-	url: '../base/base.json',
+	url: '../../base/base.json',
 	model: app.models.page
 });
