@@ -5,21 +5,19 @@ app.routers.Workspace = Backbone.Router.extend({
 	},
 	initialize: function(){
 		console.log('init');
-
+		this.pagesHolder = jQuery('#pages');
+		app.collections.mainPages = new app.collections.pages;
+		
 	},
 	main: function(){
 		console.log('main route');
-		
-		this.pagesHolder = jQuery('#pages');
-		app.collections.mainPages = new app.collections.pages;
-		app.ui.mainPages = new app.ui.mainApp({el: this.pagesHolder});
-		
 		if(window.app.core.active == null) {
 			app.ui.mainPages.openPage(0);
 			app.routers.mainWorkspace.navigate('page-0', {trigger: true});
 		}
 	},
 	page: function(id){
+		app.ui.mainPages = new app.ui.mainApp({el: this.pagesHolder});
 		console.log('page route');
 		app.ui.mainPages.openPage(id);
 	}
