@@ -11,13 +11,14 @@ app.routers.Workspace = Backbone.Router.extend({
 	},
 	main: function(){
 		console.log('main route');
+		if(!app.ui.mainPages) app.ui.mainPages = new app.ui.mainApp({el: this.pagesHolder});
 		if(window.app.core.active == null) {
 			app.ui.mainPages.openPage(0);
 			app.routers.mainWorkspace.navigate('page-0', {trigger: true});
 		}
 	},
 	page: function(id){
-		app.ui.mainPages = new app.ui.mainApp({el: this.pagesHolder});
+		if(!app.ui.mainPages) app.ui.mainPages = new app.ui.mainApp({el: this.pagesHolder});
 		console.log('page route');
 		app.ui.mainPages.openPage(id);
 	}
