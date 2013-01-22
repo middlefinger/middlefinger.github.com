@@ -7,5 +7,8 @@ app.models.page = Backbone.Model.extend({
 
 app.collections.pages = Backbone.Collection.extend({
 	url: 'js/base/base.json',
-	model: app.models.page
+	model: app.models.page,
+	initialize: function(){
+		this.fetch();
+	}
 });
