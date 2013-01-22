@@ -86,11 +86,16 @@ app.ui.mainApp = Backbone.View.extend({
 				else{
 					console.log('-');
 					
-					if(window.app.core.previous != null)
+					if(window.app.core.previous != null){
+						console.log('notNull');
 						app.routers.mainWorkspace.pagesHolder.children('.page')
 							.eq(window.app.core.previous)
 							.removeClass('active')
 							.animate({left:this.w}, {queue:false, duration:500});
+					}
+					
+					console.log('active el', app.routers.mainWorkspace.pagesHolder.children('.page').eq(window.app.core.active));
+					
 					app.routers.mainWorkspace.pagesHolder.children('.page')
 						.eq(window.app.core.active)
 						.addClass('active')
