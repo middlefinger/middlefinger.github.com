@@ -1,5 +1,7 @@
 app.ui.mainApp = Backbone.View.extend({
 	initialize: function(){
+		app.collections.mainPages.fetch();
+		
 		this.body = jQuery('body');
 		this.w = this.body.width();
 		
@@ -8,8 +10,6 @@ app.ui.mainApp = Backbone.View.extend({
 		this.render();
 	},
 	render: function(){
-		app.collections.mainPages.fetch();
-		console.log(app.collections.mainPages.models);
 		var that = this;
 		_.each(app.collections.mainPages.models, function(item, count){
 			that.renderEl(item, count);
