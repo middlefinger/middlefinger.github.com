@@ -38,6 +38,7 @@ function initModelTest(){
 	});
 
 	var models = new modelList;
+	models.fetch();
 
 	var simpleView = Backbone.View.extend({
 		template: _.template(jQuery('#tmpl').html()),
@@ -50,8 +51,7 @@ function initModelTest(){
 	var mainView = Backbone.View.extend({
 		el: jQuery('#content'),
 		initialize: function(){
-			var that = this;
-			models.fetch();
+			
 			this.render();
 		},
 		render: function(){
