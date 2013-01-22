@@ -94,7 +94,7 @@ app.ui.mainApp = Backbone.View.extend({
 							.animate({left:this.w}, {queue:false, duration:500});
 					}
 					
-					console.log('active el', app.routers.mainWorkspace.pagesHolder.children('.page').eq(window.app.core.active));
+					console.log('active =', window.app.core.active, ', active el', app.routers.mainWorkspace.pagesHolder.children('.page').eq(window.app.core.active));
 					
 					app.routers.mainWorkspace.pagesHolder.children('.page')
 						.eq(window.app.core.active)
