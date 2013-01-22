@@ -6,7 +6,6 @@ app.routers.Workspace = Backbone.Router.extend({
 	initialize: function(){
 		this.pagesHolder = jQuery('#pages');
 		app.collections.mainPages = new app.collections.pages;
-		app.collections.mainPages.fetch();
 		app.ui.mainPages = new app.ui.mainApp({el: this.pagesHolder});
 		jQuery('#header').append(new app.ui.nav().$el);
 		this.pagesHolder.children('.page').eq(window.app.core.active).addClass('active');

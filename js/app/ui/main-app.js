@@ -8,6 +8,7 @@ app.ui.mainApp = Backbone.View.extend({
 		this.render();
 	},
 	render: function(){
+		app.collections.mainPages.fetch();
 		var that = this;
 		_.each(app.collections.mainPages.models, function(item, count){
 			that.renderEl(item, count);
