@@ -57,6 +57,7 @@ app.ui.mainApp = Backbone.View.extend({
 		}
 	},
 	openPage: function(id){
+		console.log('open page', id);
 		var that = this;
 		if(window.app.core.active != id){
 			window.app.core.previous = window.app.core.active;
