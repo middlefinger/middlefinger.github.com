@@ -4,13 +4,11 @@ app.ui.mainApp = Backbone.View.extend({
 		this.w = this.body.width();
 		
 		jQuery(window).bind('resize', jQuery.proxy(this.setLeft, this));
-		
-		var that = this;
-		app.collections.mainPages.fetch({success: that.render});
+
+		app.collections.mainPages.fetch({success: this.render});
 	},
 	render: function(){
 		var that = this;
-		console.log(app.collections.mainPages.models);
 		_.each(app.collections.mainPages.models, function(item, count){
 			that.renderEl(item, count);
 		}, this);
