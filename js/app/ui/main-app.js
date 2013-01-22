@@ -6,7 +6,6 @@ app.ui.mainApp = Backbone.View.extend({
 		
 		jQuery(window).bind('resize', jQuery.proxy(this.setLeft, this));
 
-		// app.collections.mainPages.fetch({success: this.render});
 		app.collections.mainPages.fetch({success: this.render, error: function(){console.log(arguments);}});
 	},
 	render: function(){
@@ -26,7 +25,6 @@ app.ui.mainApp = Backbone.View.extend({
 		view.render().$el.css({
 			left: (count > 0 ? this.w : 0)
 		});
-		console.log(view.render().$el);
 		this.$el.css({height:view.render().$el.height()});
 	},
 	setLeft: function(){
