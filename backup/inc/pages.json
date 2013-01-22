@@ -1,0 +1,18 @@
+[
+	{
+		"page": "main",
+		"html": "<h2>Main page</h2><div class='content'><p>Paragraph 1 <strong>useful text</strong></p></div>"
+	},
+	{
+		"page": "services",
+		"html": "<h2>Services page</h2><div class='content'><p>Paragraph 2 <strong>useful text</strong></p></div>"
+	},
+	{
+		"page": "simple",
+		"html": "<h2>Simple page</h2><div class='content'><p>Paragraph 3 <strong>useful text</strong></p></div>"
+	},
+	{
+		"page": "about",
+		"html": "<h2>About page</h2><div class='content'><p>Paragraph 4 <strong>useful text</strong></p></div>"
+	}
+]
