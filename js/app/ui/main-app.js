@@ -1,5 +1,6 @@
 app.ui.mainApp = Backbone.View.extend({
 	initialize: function(){
+		_.bindAll(this, "render");
 		this.body = jQuery('body');
 		this.w = this.body.width();
 		
