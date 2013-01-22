@@ -21,7 +21,6 @@
 */
 #cboxOverlay{background:#000;}
 #colorbox{}
-    #cboxContent{margin-top:20px;}
         .cboxIframe{background:#fff;}
         #cboxError{padding:50px; border:1px solid #ccc;}
         #cboxTitle{position:absolute; top:-20px; left:0; color:#ccc;}
@@ -33,5 +32,4 @@
         #cboxNext:hover{background-position:bottom right;}
         #cboxLoadingOverlay{background:#000;}
         #cboxLoadingGraphic{background:url(../images/loading.gif) no-repeat center center;}
-        #cboxClose{position:absolute; top:5px; right:5px; display:block; background:url(../images/controls.png) no-repeat top center; width:38px; height:19px; text-indent:-9999px;}
-        #cboxClose:hover{background-position:bottom center;}
+        #cboxClose{display:none;}
