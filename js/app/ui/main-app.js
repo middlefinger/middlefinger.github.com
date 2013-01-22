@@ -7,6 +7,7 @@ app.ui.mainApp = Backbone.View.extend({
 		
 		var that = this;
 		app.collections.mainPages.fetch().success(function(){
+			console.log('done');
 			that.render();
 		});
 		// this.render();
