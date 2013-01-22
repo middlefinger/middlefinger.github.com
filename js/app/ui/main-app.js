@@ -67,6 +67,7 @@ app.ui.mainApp = Backbone.View.extend({
 			window.app.core.active = id;
 			
 			if(window.app.core.active != window.app.core.previous){
+				console.log('active =', window.app.core.active, ', prev =', window.app.core.previous);
 				if(window.app.core.active > window.app.core.previous){
 					app.routers.mainWorkspace.pagesHolder.children('.page')
 						.eq(window.app.core.previous)
