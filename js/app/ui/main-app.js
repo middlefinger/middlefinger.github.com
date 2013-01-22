@@ -6,7 +6,11 @@ app.ui.mainApp = Backbone.View.extend({
 		
 		jQuery(window).bind('resize', jQuery.proxy(this.setLeft, this));
 
-		app.collections.mainPages.fetch({success: function(){alert(1);}, error: function(){console.log(arguments);}});
+		app.collections.mainPages.fetch().success(function(){
+			console.log('done', arguments);
+		}).error(function(){
+			console.log('error', arguments);
+		});
 	},
 	render: function(){
 		var that = this;
