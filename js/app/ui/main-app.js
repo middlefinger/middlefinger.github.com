@@ -70,6 +70,7 @@ app.ui.mainApp = Backbone.View.extend({
 				console.log('active =', window.app.core.active, ', prev =', window.app.core.previous);
 				if(window.app.core.active > window.app.core.previous){
 					console.log('+');
+					
 					app.routers.mainWorkspace.pagesHolder.children('.page')
 						.eq(window.app.core.previous)
 						.removeClass('active')
@@ -84,15 +85,18 @@ app.ui.mainApp = Backbone.View.extend({
 				}
 				else{
 					console.log('-');
-					app.routers.mainWorkspace.pagesHolder.children('.page')
-						.eq(window.app.core.previous)
-						.removeClass('active')
-						.animate({left:this.w}, {queue:false, duration:500});
+					
+					if(window.app.core.previous != null)
+						app.routers.mainWorkspace.pagesHolder.children('.page')
+							.eq(window.app.core.previous)
+							.removeClass('active')
+							.animate({left:this.w}, {queue:false, duration:500});
 					app.routers.mainWorkspace.pagesHolder.children('.page')
 						.eq(window.app.core.active)
 						.addClass('active')
 						.css({left: -this.w})
 						.animate({left:0}, {queue:false, duration:500, complete: function(){
+							console.log('complete', this);
 							that.loadContent(this);
 						}});
 				}
