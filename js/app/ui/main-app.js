@@ -33,6 +33,7 @@ app.ui.mainApp = Backbone.View.extend({
 		app.routers.mainWorkspace.pagesHolder.children('.page').not('.active').css({left: this.w});
 	},
 	loadContent: function(obj){
+		console.log(obj);
 		var that = this;
 		if(!jQuery(obj).hasClass('loaded')){
 			that.$el.addClass('loading');
@@ -61,6 +62,7 @@ app.ui.mainApp = Backbone.View.extend({
 		console.log(window.app.core.active, id);
 		var that = this;
 		if(window.app.core.active != id){
+			console.log('open page - done');
 			window.app.core.previous = window.app.core.active;
 			window.app.core.active = id;
 			
