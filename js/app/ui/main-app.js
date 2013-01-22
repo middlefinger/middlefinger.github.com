@@ -69,6 +69,7 @@ app.ui.mainApp = Backbone.View.extend({
 			if(window.app.core.active != window.app.core.previous){
 				console.log('active =', window.app.core.active, ', prev =', window.app.core.previous);
 				if(window.app.core.active > window.app.core.previous){
+					console.log('+');
 					app.routers.mainWorkspace.pagesHolder.children('.page')
 						.eq(window.app.core.previous)
 						.removeClass('active')
@@ -82,6 +83,7 @@ app.ui.mainApp = Backbone.View.extend({
 						}});
 				}
 				else{
+					console.log('-');
 					app.routers.mainWorkspace.pagesHolder.children('.page')
 						.eq(window.app.core.previous)
 						.removeClass('active')
