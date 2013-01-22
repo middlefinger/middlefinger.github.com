@@ -3,5 +3,7 @@ jQuery(function(){
 });
 
 function initLb(){
-	jQuery('ul.image-list a').colorbox();
+	jQuery('ul.image-list a').colorbox({
+		inline:true
+	});
 }
