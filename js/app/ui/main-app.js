@@ -26,7 +26,7 @@ app.ui.mainApp = Backbone.View.extend({
 		view.render().$el.css({
 			left: (count > 0 ? this.w : 0)
 		});
-		
+		console.log(view.render().$el);
 		this.$el.css({height:view.render().$el.height()});
 	},
 	setLeft: function(){
