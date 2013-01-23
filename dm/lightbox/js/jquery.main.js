@@ -36,7 +36,7 @@ function initLb(){
 	
 	function handlerColorBox(){
 		var el = e.target;
-		console.log(el);
+		console.log(arguments);
 	}
 	
 	function closeColorBox(){
