@@ -15,8 +15,12 @@ function initLb(){
 		},
 		onLoad:function(){ console.log('onLoad: colorbox has started to load the targeted content', arguments); },
 		onComplete:function(){ console.log('onComplete: colorbox has displayed the loaded content', arguments); },
-		onCleanup:function(){ console.log('onCleanup: colorbox has begun the close process', arguments); },
-		onClosed:function(){ console.log('onClosed: colorbox has completely closed', arguments); }
+		onCleanup:function(){},
+		onClosed:function(){
+			jQuery('#colorbox').off('click', 'a.prev-work', prevColorBox);
+			jQuery('#colorbox').off('click', 'a.next-work', nextColorBox);
+			jQuery('#colorbox').off('click', 'a.return', closeColorBox);
+		}
 	});
 	
 	function closeColorBox(){
