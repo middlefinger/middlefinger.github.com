@@ -22,7 +22,7 @@ function initLb(){
 				inline: true, 
 				title: jQuery('#colorbox').data('title'),
 				onComplete: function(){
-					jQuery('#colorbox .description .img-holder').append(jQuery('#colorbox').data('image'));
+					jQuery('#colorbox .img-holder').append(jQuery('#colorbox').data('image'));
 					jQuery('#colorbox .description .size').text(jQuery('#colorbox').data('size').text());
 					jQuery('#colorbox .description .price dd').text(jQuery('#colorbox').data('price').text());
 				}
