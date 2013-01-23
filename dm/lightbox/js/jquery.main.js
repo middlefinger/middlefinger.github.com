@@ -10,9 +10,6 @@ function initLb(){
 		close: 'X',
 		onOpen:function(){
 			jQuery('#colorbox').on('click', ['a.prev-work', 'a.next-work', 'a.return'], handlerColorBox);
-			// jQuery('#colorbox').on('click', 'a.prev-work', prevColorBox);
-			// jQuery('#colorbox').on('click', 'a.next-work', nextColorBox);
-			// jQuery('#colorbox').on('click', 'a.return', closeColorBox);
 		},
 		onComplete:function(){
 			jQuery('#colorbox').data('gallery', new fadeGallery('#colorbox .gallery-holder', {
@@ -25,28 +22,23 @@ function initLb(){
 			}));
 		},
 		onClosed:function(){
+			jQuery('#colorbox').off('click', ['a.prev-work', 'a.next-work', 'a.return'], handlerColorBox);
 			jQuery('#colorbox').data('gallery').destroy();
 			jQuery('#colorbox').data('gallery', null);
-			
-			jQuery('#colorbox').off('click', 'a.prev-work', prevColorBox);
-			jQuery('#colorbox').off('click', 'a.next-work', nextColorBox);
-			jQuery('#colorbox').off('click', 'a.return', closeColorBox);
 		}
 	});
 	
 	function handlerColorBox(e){
 		var el = e.target;
-		console.log(el, e);
-	}
-	
-	function closeColorBox(){
-		cBox.colorbox.close();
-	}
-	function prevColorBox(){
-		cBox.colorbox.prev();
-	}
-	function nextColorBox(){
-		cBox.colorbox.next();
+		if(el.className === 'prev-work'){
+			cBox.colorbox.prev();
+		}
+		else if(el.className === 'next-work'){
+			cBox.colorbox.next();
+		}
+		else if(el.className === 'return'){
+			cBox.colorbox.close();
+		}
 	}
 }
 
