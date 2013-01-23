@@ -79,6 +79,7 @@ ul.image-list li img{
 	height:480px;
 	padding:10px;
 	overflow:hidden;
+	background-color:#eee;
 }
 .lightbox .content .gallery-holder{
 	width:100%;
