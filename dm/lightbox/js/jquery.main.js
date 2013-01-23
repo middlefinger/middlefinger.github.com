@@ -12,6 +12,7 @@ function initLb(){
 			jQuery('#colorbox').on('click', ['a.prev-work', 'a.next-work', 'a.return'], handlerColorBox);
 		},
 		onComplete:function(){
+			console.log(1);
 			jQuery('#colorbox').data({
 				'size': jQuery('#colorbox .description .size'),
 				'price': jQuery('#colorbox .description .price dd'),
@@ -21,12 +22,14 @@ function initLb(){
 			jQuery('#colorbox a.order').attr('href', '#order').colorbox({
 				inline: true, 
 				onComplete: function(){
+					console.log(3);
 					jQuery('#colorbox .img-holder').empty().append(jQuery('#colorbox').data('image'));
 					jQuery('#colorbox .description .title').text(jQuery('#colorbox').data('title'));
 					jQuery('#colorbox .description .size').text(jQuery('#colorbox').data('size').text());
 					jQuery('#colorbox .description .price dd').text(jQuery('#colorbox').data('price').text());
 				},
 				onClosed:function(){
+					console.log(4);
 					jQuery('#colorbox a.order').colorbox.remove();
 				}
 			});
@@ -47,6 +50,7 @@ function initLb(){
 			}));
 		},
 		onClosed:function(){
+			console.log(2);
 			jQuery('#colorbox a.order').colorbox.remove();
 			jQuery('#colorbox').off('click', ['a.prev-work', 'a.next-work', 'a.return'], handlerColorBox);
 			jQuery('#colorbox').data('gallery').destroy();
