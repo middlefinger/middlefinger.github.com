@@ -12,12 +12,20 @@ function initLb(){
 			jQuery('#colorbox').on('click', ['a.prev-work', 'a.next-work', 'a.return'], handlerColorBox);
 		},
 		onComplete:function(){
+			var sizeBox = jQuery('#colorbox .description .size');
+			var priceBox = jQuery('#colorbox .description .price dd');
+			
 			jQuery('#colorbox').data('gallery', new fadeGallery('#colorbox .gallery-holder', {
 				list: '.g1 > ul',
 				thumbs: '.thumbs > ul > li',
 				thumasdbs: '.thumbs > ul > li',
 				onLoad: function(that){
-					// console.log(that);
+					if(sizeBox.length){
+						sizeBox.text(that.el.eq(that.active).find('img').data('size'));
+					}
+					if(priceBox.length){
+						priceBox.text(that.el.eq(that.active).find('img').data('price'));
+					}
 				}
 			}));
 		},
