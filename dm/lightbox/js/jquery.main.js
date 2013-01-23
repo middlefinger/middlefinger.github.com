@@ -46,7 +46,7 @@ fadeGallery.prototype = {
 		el: '> li',
 		speed: 500,
 		activeClass: 'active'
-	}
+	},
 	init: function(node, opt){
 		this.node = jQuery(node).eq(0);
 		if(this.node.length){
