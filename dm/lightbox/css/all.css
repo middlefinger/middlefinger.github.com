@@ -77,7 +77,7 @@ ul.image-list li img{
 .lightbox .content{
 	width:680px;
 	height:450px;
-	padding:30 10 10px;
+	padding:30px 10px 10px;
 	overflow:hidden;
 	background-color:#eee;
 }
