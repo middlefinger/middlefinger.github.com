@@ -12,9 +12,8 @@ function initLb(){
 			jQuery('#colorbox').on('click', 'a.prev-work', prevColorBox);
 			jQuery('#colorbox').on('click', 'a.next-work', nextColorBox);
 			jQuery('#colorbox').on('click', 'a.return', closeColorBox);
-			
-			console.log(jQuery('#colorbox .gallery-holder'));
-			
+		},
+		onComplete:function(){
 			jQuery('#colorbox').data('gallery', new fadeGallery('#colorbox .gallery-holder', {
 				list: '.g1 > ul',
 				thumbs: '.thumbs > ul > li',
@@ -23,9 +22,6 @@ function initLb(){
 					console.log(that);
 				}
 			}));
-		},
-		onComplete:function(){
-			// paste code here
 		},
 		onClosed:function(){
 			jQuery('#colorbox').off('click', 'a.prev-work', prevColorBox);
