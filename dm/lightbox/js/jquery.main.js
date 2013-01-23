@@ -24,6 +24,8 @@ function initLb(){
 			}));
 		},
 		onClosed:function(){
+			jQuery('#colorbox').data('gallery').destroy();
+			
 			jQuery('#colorbox').off('click', 'a.prev-work', prevColorBox);
 			jQuery('#colorbox').off('click', 'a.next-work', nextColorBox);
 			jQuery('#colorbox').off('click', 'a.return', closeColorBox);
@@ -97,5 +99,7 @@ fadeGallery.prototype = {
 		}
 		e.preventDefault();
 	},
-	destroy: function(){}
+	destroy: function(){
+		this.node.off('click');
+	}
 }
