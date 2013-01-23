@@ -13,9 +13,9 @@ function initLb(){
 			jQuery('#colorbox').on('click', 'a.next-work', nextColorBox);
 			jQuery('#colorbox').on('click', 'a.return', closeColorBox);
 		},
-		onLoad:function(){ console.log('onLoad: colorbox has started to load the targeted content', arguments); },
-		onComplete:function(){ console.log('onComplete: colorbox has displayed the loaded content', arguments); },
-		onCleanup:function(){},
+		onComplete:function(){
+			// paste code here
+		},
 		onClosed:function(){
 			jQuery('#colorbox').off('click', 'a.prev-work', prevColorBox);
 			jQuery('#colorbox').off('click', 'a.next-work', nextColorBox);
