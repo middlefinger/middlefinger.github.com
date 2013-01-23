@@ -9,7 +9,7 @@ function initLb(){
 		next: '&gt;',
 		close: 'X',
 		onOpen:function(){
-			jQuery('#colorbox').on('click', ['a.prev-work', 'a.next-work', 'a.return'], observe);
+			jQuery('#colorbox').on('click', ['a.prev-work', 'a.next-work', 'a.return'], handlerColorBox);
 			// jQuery('#colorbox').on('click', 'a.prev-work', prevColorBox);
 			// jQuery('#colorbox').on('click', 'a.next-work', nextColorBox);
 			// jQuery('#colorbox').on('click', 'a.return', closeColorBox);
@@ -34,8 +34,9 @@ function initLb(){
 		}
 	});
 	
-	function observe(){
-		console.log(1);
+	function handlerColorBox(){
+		var el = e.target;
+		console.log(el);
 	}
 	
 	function closeColorBox(){
