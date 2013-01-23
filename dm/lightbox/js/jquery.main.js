@@ -25,6 +25,7 @@ function initLb(){
 		},
 		onClosed:function(){
 			jQuery('#colorbox').data('gallery').destroy();
+			jQuery('#colorbox').data('gallery', null);
 			
 			jQuery('#colorbox').off('click', 'a.prev-work', prevColorBox);
 			jQuery('#colorbox').off('click', 'a.next-work', nextColorBox);
