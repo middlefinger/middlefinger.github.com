@@ -33,7 +33,7 @@ function initLb(){
 				thumbs: '.thumbs > ul > li',
 				thumasdbs: '.thumbs > ul > li',
 				onLoad: function(that){
-					if(jQuery('#colorbox').data('image', that.el.eq(that.active).find('img').clone());
+					jQuery('#colorbox').data('image', that.el.eq(that.active).find('img').clone());
 					if(jQuery('#colorbox').data('size').length){
 						jQuery('#colorbox').data('size').text(that.el.eq(that.active).find('img').data('size'));
 					}
