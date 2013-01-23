@@ -21,6 +21,7 @@
 */
 #cboxOverlay{background:#000;}
 #colorbox{}
+    #cboxContent{margin-top:20px;}
         .cboxIframe{background:#fff;}
         #cboxError{padding:50px; border:1px solid #ccc;}
         #cboxTitle{position:absolute; top:-20px; left:0; color:#ccc;}
