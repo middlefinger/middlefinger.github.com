@@ -35,7 +35,7 @@ function initLb(){
 	});
 	
 	function handlerColorBox(){
-		var el = e.target;
+		// var el = e.target;
 		console.log(arguments);
 	}
 	
