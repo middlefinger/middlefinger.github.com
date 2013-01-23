@@ -24,8 +24,8 @@
         .cboxIframe{background:#fff;}
         #cboxError{padding:50px; border:1px solid #ccc;}
         #cboxTitle{position:absolute; top:5px; left:35px; color:#000;}
-        #cboxCurrent{display:none;}
-        #cboxSlideshow{display:none;}
+        #cboxCurrent{display:none !important;}
+        #cboxSlideshow{display:none !important;}
         #cboxPrevious{position:absolute; top:50%; left:0; margin-top:-8px; width:25px; height:16px; color:#fff; text-align:center;}
         #cboxNext{position:absolute; top:50%; right:0; margin-top:-8px; width:25px; height:16px; color:#fff; text-align:center;}
         #cboxLoadingOverlay{background:#000;}
