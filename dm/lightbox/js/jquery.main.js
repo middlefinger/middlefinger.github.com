@@ -20,9 +20,9 @@ function initLb(){
 			
 			jQuery('#colorbox a.order').colorbox({
 				inline: true, 
-				title: jQuery('#colorbox').data('title'),
 				onComplete: function(){
 					jQuery('#colorbox .img-holder').append(jQuery('#colorbox').data('image'));
+					jQuery('#colorbox .description .title').text(jQuery('#colorbox').data('title'));
 					jQuery('#colorbox .description .size').text(jQuery('#colorbox').data('size').text());
 					jQuery('#colorbox .description .price dd').text(jQuery('#colorbox').data('price').text());
 				}
