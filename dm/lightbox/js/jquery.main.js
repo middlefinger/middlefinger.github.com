@@ -15,6 +15,8 @@ function initLb(){
 			var sizeBox = jQuery('#colorbox .description .size');
 			var priceBox = jQuery('#colorbox .description .price dd');
 			
+			jQuery('#colorbox a.order').colorbox({inline: true});
+			
 			jQuery('#colorbox').data('gallery', new fadeGallery('#colorbox .gallery-holder', {
 				list: '.g1 > ul',
 				thumbs: '.thumbs > ul > li',
