@@ -30,7 +30,7 @@ function initLb(){
 				},
 				onClosed:function(){
 					console.log(4);
-					jQuery('#colorbox a.order').colorbox.remove();
+					// jQuery('#colorbox a.order').colorbox.remove();
 				}
 			});
 			
@@ -51,7 +51,7 @@ function initLb(){
 		},
 		onClosed:function(){
 			console.log(2);
-			jQuery('#colorbox a.order').colorbox.remove();
+			// jQuery('#colorbox a.order').colorbox.remove();
 			jQuery('#colorbox').off('click', ['a.prev-work', 'a.next-work', 'a.return'], handlerColorBox);
 			jQuery('#colorbox').data('gallery').destroy();
 			jQuery('#colorbox').data('gallery', null);
