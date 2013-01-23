@@ -128,6 +128,18 @@ ul.image-list li img{
 	overflow:hidden;
 	margin:0 8px 0 0;
 }
+.lightbox .content .gallery .g1 ul{
+	position:relative;
+	width:100%;
+	height:350px;
+}
+.lightbox .content .gallery .g1 ul li{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+}
 .lightbox .content .gallery .g1 ul li img{
 	display:block;
 	width:100%;
