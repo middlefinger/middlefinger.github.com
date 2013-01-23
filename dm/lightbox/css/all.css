@@ -182,6 +182,12 @@ ul.image-list li img{
 .popup .header .img-holder{
 	float:left;
 	width:200px;
+	height:200px;
+}
+.popup .header .img-holder img{
+	display:block;
+	width:100%;
+	height:100%;
 }
 .popup .header .description{
 	float:left;
