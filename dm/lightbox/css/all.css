@@ -10,6 +10,11 @@ dl, dt, dd{
 	margin:0;
 	padding:0;
 }
+form, fieldset{
+	margin:0;
+	padding:0;
+	border:none;
+}
 #wrapper{
 	width:75%;
 	margin:100px auto;
@@ -168,6 +173,7 @@ ul.image-list li img{
 	width:500px;
 	height:300px;
 	overflow:hidden;
+	background:#fff;
 }
 .popup .header{
 	width:100%;

@@ -12,21 +12,31 @@ function initLb(){
 			jQuery('#colorbox').on('click', ['a.prev-work', 'a.next-work', 'a.return'], handlerColorBox);
 		},
 		onComplete:function(){
-			var sizeBox = jQuery('#colorbox .description .size');
-			var priceBox = jQuery('#colorbox .description .price dd');
+			jQuery('#colorbox').data({
+				'size': jQuery('#colorbox .description .size'),
+				'price': jQuery('#colorbox .description .price dd'),
+				'title': jQuery('#cboxTitle').text()
+			});
 			
-			jQuery('#colorbox a.order').colorbox({inline: true});
+			jQuery('#colorbox a.order').colorbox({
+				inline: true, 
+				title: jQuery('#colorbox').data('title'),
+				onComplete: function(){
+					jQuery('#colorbox .description .size').text(jQuery('#colorbox').data('size').text());
+					jQuery('#colorbox .description .price dd').text(jQuery('#colorbox').data('price').text());
+				}
+			});
 			
 			jQuery('#colorbox').data('gallery', new fadeGallery('#colorbox .gallery-holder', {
 				list: '.g1 > ul',
 				thumbs: '.thumbs > ul > li',
 				thumasdbs: '.thumbs > ul > li',
 				onLoad: function(that){
-					if(sizeBox.length){
-						sizeBox.text(that.el.eq(that.active).find('img').data('size'));
+					if(jQuery('#colorbox').data('size').length){
+						jQuery('#colorbox').data('size').text(that.el.eq(that.active).find('img').data('size'));
 					}
-					if(priceBox.length){
-						priceBox.text(that.el.eq(that.active).find('img').data('price'));
+					if(jQuery('#colorbox').data('price').length){
+						jQuery('#colorbox').data('price').text(that.el.eq(that.active).find('img').data('price'));
 					}
 				}
 			}));
