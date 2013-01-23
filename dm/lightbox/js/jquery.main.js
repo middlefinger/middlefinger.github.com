@@ -21,10 +21,13 @@ function initLb(){
 			jQuery('#colorbox a.order').colorbox({
 				inline: true, 
 				onComplete: function(){
-					jQuery('#colorbox .img-holder').append(jQuery('#colorbox').data('image'));
+					jQuery('#colorbox .img-holder').empty().append(jQuery('#colorbox').data('image'));
 					jQuery('#colorbox .description .title').text(jQuery('#colorbox').data('title'));
 					jQuery('#colorbox .description .size').text(jQuery('#colorbox').data('size').text());
 					jQuery('#colorbox .description .price dd').text(jQuery('#colorbox').data('price').text());
+				},
+				onClosed:function(){
+					jQuery('#colorbox a.order').colorbox.remove();
 				}
 			});
 			
@@ -44,6 +47,7 @@ function initLb(){
 			}));
 		},
 		onClosed:function(){
+			jQuery('#colorbox a.order').colorbox.remove();
 			jQuery('#colorbox').off('click', ['a.prev-work', 'a.next-work', 'a.return'], handlerColorBox);
 			jQuery('#colorbox').data('gallery').destroy();
 			jQuery('#colorbox').data('gallery', null);
