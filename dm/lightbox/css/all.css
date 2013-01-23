@@ -76,19 +76,19 @@ ul.image-list li img{
 }
 .lightbox .content{
 	width:680px;
-	height:480px;
-	padding:10px;
+	height:450px;
+	padding:30 10 10px;
 	overflow:hidden;
 	background-color:#eee;
 }
 .lightbox .content .gallery-holder{
 	width:100%;
-	height:360px;
+	height:350px;
 	overflow:hidden;
 }
 .lightbox .content .description{
 	width:100%;
-	height:80px;
+	height:70px;
 	overflow:hidden;
 	padding:10px 0 0;
 }
@@ -109,7 +109,7 @@ ul.image-list li img{
 }
 .lightbox .content .controls{
 	width:100%;
-	height:30px;
+	height:20px;
 	overflow:hidden;
 	text-align:center;
 }
