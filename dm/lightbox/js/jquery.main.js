@@ -1,5 +1,8 @@
 jQuery(function(){
 	initLb();
+	new fadeGallery('.post', {
+		list: 'ul.image-list'
+	});
 });
 
 function initLb(){
@@ -32,4 +35,28 @@ function initLb(){
 	function nextColorBox(){
 		cBox.colorbox.next();
 	}
+}
+
+function fadeGallery(node, opt){
+	this.init(node, opt);
+}
+fadeGallery.prototype = {
+	defualts: {
+		list: 'ul',
+		el: '> li',
+		speed: 500,
+		activeClass: 'active'
+	}
+	init: function(node, opt){
+		this.node = jQuery(node).eq(0);
+		if(this.node.length){
+			this.extendOpt(this.defaults, opt);
+		}
+	},
+	extendOpt: function(def, opt){
+		for(var key in def){
+			console.log(def, def[key]);
+		}
+	},
+	destroy: function(){}
 }
