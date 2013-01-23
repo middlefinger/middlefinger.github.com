@@ -22,6 +22,7 @@ function initLb(){
 				inline: true, 
 				title: jQuery('#colorbox').data('title'),
 				onComplete: function(){
+					jQuery('#colorbox .description .img-holder').append(jQuery('#colorbox').data('image'));
 					jQuery('#colorbox .description .size').text(jQuery('#colorbox').data('size').text());
 					jQuery('#colorbox .description .price dd').text(jQuery('#colorbox').data('price').text());
 				}
@@ -32,6 +33,7 @@ function initLb(){
 				thumbs: '.thumbs > ul > li',
 				thumasdbs: '.thumbs > ul > li',
 				onLoad: function(that){
+					if(jQuery('#colorbox').data('image', that.el.eq(that.active).find('img').clone());
 					if(jQuery('#colorbox').data('size').length){
 						jQuery('#colorbox').data('size').text(that.el.eq(that.active).find('img').data('size'));
 					}
