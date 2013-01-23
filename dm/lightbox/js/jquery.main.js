@@ -4,6 +4,9 @@ jQuery(function(){
 
 function initLb(){
 	jQuery('ul.image-list a').colorbox({
-		rel: 'gr'
+		rel: 'gr',
+		previous: '&lt;',
+		next: '&gt;'
+		close: 'X;'
 	});
 }
