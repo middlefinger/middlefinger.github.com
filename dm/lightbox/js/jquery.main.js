@@ -34,9 +34,9 @@ function initLb(){
 		}
 	});
 	
-	function handlerColorBox(){
-		// var el = e.target;
-		console.log(arguments);
+	function handlerColorBox(e){
+		var el = e.target;
+		console.log(el, e);
 	}
 	
 	function closeColorBox(){
