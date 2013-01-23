@@ -18,7 +18,7 @@ function initLb(){
 				'title': jQuery('#cboxTitle').text()
 			});
 			
-			jQuery('#colorbox a.order').colorbox({
+			jQuery('#colorbox a.order').attr('href', '#order').colorbox({
 				inline: true, 
 				onComplete: function(){
 					jQuery('#colorbox .img-holder').empty().append(jQuery('#colorbox').data('image'));
