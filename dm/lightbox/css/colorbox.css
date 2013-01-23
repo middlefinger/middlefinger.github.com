@@ -23,7 +23,7 @@
 #colorbox{}
         .cboxIframe{background:#fff;}
         #cboxError{padding:50px; border:1px solid #ccc;}
-        #cboxTitle{position:absolute; top:0; left:0; color:#ccc;}
+        #cboxTitle{position:absolute; top:0; left:0; color:#000;}
         #cboxCurrent{display:none;}
         #cboxSlideshow{display:none;}
         #cboxPrevious{position:absolute; top:50%; left:5px; margin-top:-32px; width:28px; height:65px;}
