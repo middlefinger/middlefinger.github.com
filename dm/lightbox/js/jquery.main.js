@@ -9,9 +9,10 @@ function initLb(){
 		next: '&gt;',
 		close: 'X',
 		onOpen:function(){
-			jQuery('#colorbox').on('click', 'a.prev-work', prevColorBox);
-			jQuery('#colorbox').on('click', 'a.next-work', nextColorBox);
-			jQuery('#colorbox').on('click', 'a.return', closeColorBox);
+			jQuery('#colorbox').on('click', ['a.prev-work', 'a.next-work', 'a.return'], observe);
+			// jQuery('#colorbox').on('click', 'a.prev-work', prevColorBox);
+			// jQuery('#colorbox').on('click', 'a.next-work', nextColorBox);
+			// jQuery('#colorbox').on('click', 'a.return', closeColorBox);
 		},
 		onComplete:function(){
 			jQuery('#colorbox').data('gallery', new fadeGallery('#colorbox .gallery-holder', {
@@ -19,7 +20,7 @@ function initLb(){
 				thumbs: '.thumbs > ul > li',
 				thumasdbs: '.thumbs > ul > li',
 				onLoad: function(that){
-					console.log(that);
+					// console.log(that);
 				}
 			}));
 		},
@@ -32,6 +33,10 @@ function initLb(){
 			jQuery('#colorbox').off('click', 'a.return', closeColorBox);
 		}
 	});
+	
+	function observe(){
+		console.log(1);
+	}
 	
 	function closeColorBox(){
 		cBox.colorbox.close();
