@@ -174,11 +174,13 @@ ul.image-list li img{
 	height:300px;
 	overflow:hidden;
 	background:#fff;
+	padding:10px;
 }
 .popup .header{
 	width:100%;
 	overflow:hidden;
 }
+.popup .header .head-title{display:block;}
 .popup .header .img-holder{
 	float:left;
 	width:200px;
