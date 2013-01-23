@@ -12,25 +12,17 @@ function initLb(){
 			jQuery('#colorbox').on('click', ['a.prev-work', 'a.next-work', 'a.return'], handlerColorBox);
 		},
 		onComplete:function(){
-			console.log(1);
 			jQuery('#colorbox').data({
 				'size': jQuery('#colorbox .description .size'),
 				'price': jQuery('#colorbox .description .price dd'),
 				'title': jQuery('#cboxTitle').text()
-			});
-			
-			jQuery('#colorbox a.order').attr('href', '#order').colorbox({
+			}).find('a.order').attr('href', '#order').colorbox({
 				inline: true, 
 				onComplete: function(){
-					console.log(3);
 					jQuery('#colorbox .img-holder').empty().append(jQuery('#colorbox').data('image'));
 					jQuery('#colorbox .description .title').text(jQuery('#colorbox').data('title'));
 					jQuery('#colorbox .description .size').text(jQuery('#colorbox').data('size').text());
 					jQuery('#colorbox .description .price dd').text(jQuery('#colorbox').data('price').text());
-				},
-				onClosed:function(){
-					console.log(4);
-					// jQuery('#colorbox a.order').colorbox.remove();
 				}
 			});
 			
@@ -50,25 +42,15 @@ function initLb(){
 			}));
 		},
 		onClosed:function(){
-			console.log(2);
-			// jQuery('#colorbox a.order').colorbox.remove();
-			jQuery('#colorbox').off('click', ['a.prev-work', 'a.next-work', 'a.return'], handlerColorBox);
-			jQuery('#colorbox').data('gallery').destroy();
-			jQuery('#colorbox').data('gallery', null);
+			jQuery('#colorbox').off('click', ['a.prev-work', 'a.next-work', 'a.return'], handlerColorBox).data('gallery').destroy().data('gallery', null);
 		}
 	});
 	
 	function handlerColorBox(e){
-		var el = e.target;
-		if(el.className === 'prev-work'){
-			cBox.colorbox.prev();
-		}
-		else if(el.className === 'next-work'){
-			cBox.colorbox.next();
-		}
-		else if(el.className === 'return'){
-			cBox.colorbox.close();
-		}
+		if(e.target.className === 'prev-work') cBox.colorbox.prev();
+		else if(e.target.className === 'next-work') cBox.colorbox.next();
+		else if(e.target.className === 'return')cBox.colorbox.close();
+		e.preventDefault();
 	}
 }
 

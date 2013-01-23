@@ -15,11 +15,15 @@ form, fieldset{
 	padding:0;
 	border:none;
 }
+.hidden{
+	display:none;
+}
 #wrapper{
 	width:75%;
 	margin:100px auto;
 	border:1px solid #000;
 }
+/* main */
 .post{
 	width:100%;
 	overflow:hidden;
@@ -39,25 +43,14 @@ ul.image-list li img{
 	width:90%;
 	height:90%;
 }
+/* lightbox of works */
 .lightbox{
 	width:700px;
 	overflow:hidden;
 	padding:0 25px;
 }
-.lightbox .header{
-	width:690px;
-	position:relative;
-	padding:5px;
-}
-.lightbox .header .close{
-	float:right;
-}
-.lightbox .holder{
-	width:100%;
-	position:relative;
-	background-color:#eee;
-}
-.lightbox a.prev{
+.lightbox a.prev,
+.lightbox a.next{
 	position:absolute;
 	left:-20px;
 	top:50%;
@@ -69,15 +62,8 @@ ul.image-list li img{
 	margin-top:-8px;
 }
 .lightbox a.next{
-	position:absolute;
+	left: auto;
 	right:-20px;
-	top:50%;
-	width:15px;
-	height:15px;
-	color:#fff;
-	text-decoration:none;
-	font:bold 20px/22px Arial; 
-	margin-top:-8px
 }
 .lightbox .content{
 	width:680px;
@@ -166,9 +152,7 @@ ul.image-list li img{
 	width:100%;
 	height:100%;
 }
-.hidden{
-	display:none;
-}
+/* lightbox of order */
 .popup{
 	width:520px;
 	height:320px;
@@ -180,7 +164,9 @@ ul.image-list li img{
 	width:100%;
 	overflow:hidden;
 }
-.popup .header .head-title{display:block;}
+.popup .header .head-title{
+	display:block;
+}
 .popup .header .img-holder{
 	float:left;
 	width:200px;
