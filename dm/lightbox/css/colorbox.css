@@ -23,14 +23,12 @@
 #colorbox{}
         .cboxIframe{background:#fff;}
         #cboxError{padding:50px; border:1px solid #ccc;}
-        #cboxTitle{position:absolute; top:0; left:0; color:#000;}
+        #cboxTitle{position:absolute; top:5px; left:35px; color:#000;}
         #cboxCurrent{display:none;}
         #cboxSlideshow{display:none;}
-        #cboxPrevious{position:absolute; top:50%; left:5px; margin-top:-32px; width:28px; height:65px;}
-        #cboxPrevious:hover{background-position:bottom left;}
-        #cboxNext{position:absolute; top:50%; right:5px; margin-top:-32px; width:28px; height:65px;}
-        #cboxNext:hover{background-position:bottom right;}
+        #cboxPrevious{position:absolute; top:50%; left:0; margin-top:-32px; width:25px; height:65px; color:#fff;}
+        #cboxNext{position:absolute; top:50%; right:0; margin-top:-32px; width:25px; height:65px; color:#fff;}
         #cboxLoadingOverlay{background:#000;}
         #cboxLoadingGraphic{background:url(../images/loading.gif) no-repeat center center;}
-        #cboxClose{position:absolute; top:5px; right:5px; display:block; width:38px; height:19px;}
+        #cboxClose{position:absolute; top:5px; right:35px; display:block; width:12px; height:19px;}
         #cboxClose:hover{color:red;}
