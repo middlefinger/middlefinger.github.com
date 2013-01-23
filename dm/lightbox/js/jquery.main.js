@@ -13,7 +13,9 @@ function initLb(){
 			jQuery('#colorbox').on('click', 'a.next-work', nextColorBox);
 			jQuery('#colorbox').on('click', 'a.return', closeColorBox);
 			
-			jQuery('#colorbox').data('gallery', new fadeGallery('#colorbox .gallery', {
+			console.log(jQuery('#colorbox .gallery-holder'));
+			
+			jQuery('#colorbox').data('gallery', new fadeGallery('#colorbox .gallery-holder', {
 				list: '.g1 > ul',
 				thumbs: '.thumbs > ul > li',
 				thumasdbs: '.thumbs > ul > li',
