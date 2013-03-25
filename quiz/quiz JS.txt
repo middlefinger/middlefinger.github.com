@@ -1,4 +1,4 @@
-Quiz Javascript
+Javascript questions
 
 01. Какая связь между JavaScript и ECMAScript?
 
