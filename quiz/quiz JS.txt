@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-JAVASCRIPT
-=======
 Quiz Javascript
->>>>>>> 156dd9daaceffd24fa3cc9d070a5955a0e3c6b60
 
 01. Какая связь между JavaScript и ECMAScript?
 
