@@ -1,3 +1,5 @@
+Quiz Javascript
+
 01. Какая связь между JavaScript и ECMAScript?
 
 02. Какая разница между <div> и <span> ?
