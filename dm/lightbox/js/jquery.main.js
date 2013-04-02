@@ -42,9 +42,7 @@ function initLb(){
 			}));
 		},
 		onClosed:function(){
-			jQuery('#colorbox').off('click', ['a.prev-work', 'a.next-work', 'a.return'], handlerColorBox);
-			jQuery('#colorbox').data('gallery').destroy();
-			jQuery('#colorbox').data('gallery', null);
+			jQuery('#colorbox').off('click', ['a.prev-work', 'a.next-work', 'a.return'], handlerColorBox).data('gallery').destroy().data('gallery', null);
 		}
 	});
 	
