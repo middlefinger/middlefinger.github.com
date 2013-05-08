@@ -94,7 +94,23 @@ a:hover{
 }
 #content{
 	float:left;
-	margin:0 0 0 200px;
+	width:100%;
+}
+#content .mcontent{
+	margin:0 0 0 220px;
+}
+.content .row{
+	width:100%;
+	overflow:hidden;
+	padding:20px 0 0;
+}
+.content .row .col{
+	float:left;
+	width:30%;
+	margin:0 20px 20px 0;
+}
+.content .row ul li{
+	margin:0 0 10px;
 }
 #nav{
 	float:left;
