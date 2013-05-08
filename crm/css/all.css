@@ -1,0 +1,164 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	font-family: sans-serif;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html,body {
+	height: 100%;
+	margin: 0;
+}
+body{
+	font:14px/16px Arial, Verdana, Helvetica, sans-serif;
+}
+a,
+a:hover,
+a:visited{
+	color:#1f9aff;
+}
+a:hover{
+	text-decoration:none;
+}
+#wrapper{
+	width:100%;
+	min-width:1024px;
+	margin:0 auto;
+}
+.mheader,
+#header,
+#main,
+#footer{
+	width:100%;
+	overflow:hidden;
+	position:relative;
+}
+.mheader{
+	background:#ccc;
+}
+.logo{
+	float:left;
+	width:100px;
+	height:100px;
+	margin:0 0 0 -100%;
+}
+.logo a{
+	display:block;
+	width:100px;
+	height:100px;
+	background:url(../images/logo.gif) no-repeat 0 0;
+	text-indent:-9999px;
+	overflow:hidden;
+}
+#info{
+	float:left;
+	width:100%;
+}
+#info .more{
+	position:absolute;
+	right:10px;
+	bottom:10px;
+}
+#major{
+	float:right;
+	clear:both;
+}
+#major ul{
+	padding:15px 0 0;
+}
+#major ul li{
+	float:left;
+	margin:0 15px 0 0;
+}
+#main{
+	padding:15px 0;
+}
+#content{
+	float:left;
+	margin:0 0 0 200px;
+}
+#nav{
+	float:left;
+	width:200px;
+	margin:0 0 0 -100%;
+	background:#eee;
+	padding:10px 0 0;
+}
+#nav ul.links{
+	padding:0 0 20px 20px;
+}
+#nav ul.links li{
+	width:100%;
+	overflow:hidden;
+}
+#nav ul.links li .title{
+	float:left;
+}
+#nav ul.links .tool{
+	background:url(../images/tool.gif) no-repeat 0 0;
+	float:left;
+	text-indent:-9999px;
+	overflow:hidden;
+	width:10px;
+	height:10px;
+	margin:3px 0 0 5px;
+}
+a.switch{
+	font-size:10px;
+	line-height:12px;
+}
+#nav ul{
+	padding:0 0 0 20px;
+}
+#nav li.active li.active .opener,
+#nav .active .opener{
+	padding:0 0 0 10px;
+	background:url(../images/minus.gif) no-repeat 0 0px;
+}
+#nav li.active li .opener,
+#nav li li .opener,
+#nav .opener{
+	margin:3px 0 0;
+	padding:0 0 0 10px;
+	background:url(../images/plus.gif) no-repeat 0 0px;
+	float:left;
+	width:10px;
+	height:10px;
+	text-indent:-9999px;
+	overflow:hidden;
+}
+.submenu{
+	width:100%;
+	overflow:hidden;
+	background:#c0c0c0;
+}
+.submenu ul{
+	
+}
+.submenu ul li{
+	float:left;
+	margin:0 10px 0 0;
+}
+#footer{
+	padding:15px 0;
+	background:#ccc;
+}
